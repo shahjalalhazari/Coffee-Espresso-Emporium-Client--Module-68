@@ -1,4 +1,5 @@
 import React from "react";
+import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -28,7 +29,7 @@ const AddCoffee = () => {
         console.log(data);
         if (data.insertedId) {
           Swal.fire({
-            title: "success!",
+            title: "Success!",
             text: "New Coffee Added Successfully.",
             icon: "success",
             confirmButtonText: "Cool",
@@ -44,19 +45,7 @@ const AddCoffee = () => {
           <ul>
             <li>
               <Link to="/">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  className="w-4 h-4 mr-2 stroke-current"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
-                  ></path>
-                </svg>
+                <FaArrowLeft className="mr-2"/>
                 Home
               </Link>
             </li>
@@ -100,7 +89,7 @@ const AddCoffee = () => {
                 type="text"
                 name="name"
                 placeholder="Enter Coffee Name"
-                className="p-3"
+                className="p-3 rounded-lg"
               />
             </div>
             <div className="grid">
@@ -114,7 +103,7 @@ const AddCoffee = () => {
                 type="text"
                 name="chef"
                 placeholder="Enter Coffee Chef"
-                className="p-3"
+                className="p-3 rounded-lg"
               />
             </div>
             <div className="grid">
@@ -128,7 +117,7 @@ const AddCoffee = () => {
                 type="text"
                 name="supplier"
                 placeholder="Enter Coffee Supplier"
-                className="p-3"
+                className="p-3 rounded-lg"
               />
             </div>
             <div className="grid">
@@ -156,7 +145,7 @@ const AddCoffee = () => {
                 type="text"
                 name="category"
                 placeholder="Enter Coffee Category"
-                className="p-3"
+                className="p-3 rounded-lg"
               />
             </div>
             <div className="grid">
@@ -170,7 +159,7 @@ const AddCoffee = () => {
                 type="text"
                 name="details"
                 placeholder="Enter Coffee Details"
-                className="p-3"
+                className="p-3 rounded-lg"
               />
             </div>
           </div>
@@ -186,13 +175,13 @@ const AddCoffee = () => {
               type="text"
               name="photo"
               placeholder="Enter Photo URL"
-              className="p-3 w-full"
+              className="p-3 w-full rounded-lg"
             />
           </div>
           <input
             type="submit"
             value="Add Coffee"
-            className="mt-6 w-full py-3 cursor-pointer text-bold text-lg bg-[#D2B48C] rounded-lg border-[#331A15] border-2"
+            className="mt-6 w-full py-3 cursor-pointer text-bold text-base bg-[#D2B48C] rounded-lg border-[#331A15] border-2"
           />
         </form>
       </div>
